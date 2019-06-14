@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
     private void displayChatMessage() {
 
         ListView listOfMessage = (ListView)findViewById(R.id.list_of_message);
+        Query query = FirebaseDatabase.getInstance().getReference();
         FirebaseListOptions<ChatMessage> options =
                 new FirebaseListOptions.Builder<ChatMessage>()
                         .setQuery(query, ChatMessage.class)
